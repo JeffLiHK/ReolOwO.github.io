@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Hobbies page</title>
-    <style type="text/css">
+    <style>
         * {
             padding: 0;
             margin: 0;
@@ -13,6 +13,10 @@
             width: 100%;
             height: 100%;
             font-family: "Lucida Calligraphy", Arial, serif;
+        }
+
+        iframe {
+            border: 0;
         }
 
         .center {
@@ -84,7 +88,7 @@
             background: linear-gradient(to top, #fd3737, #ff4545, #ff5f5f);
             -webkit-background-clip: text;
             color: transparent;
-            -webkit-text-stroke: 0.2px #b28ee3;
+            -webkit-text-stroke: 0.1px #b28ee3;
             font-family: "Lucida Handwriting", sans-serif, Arial;
             font-size: 48px;
             text-shadow: 5px 5px 12px #69578a;
@@ -99,6 +103,8 @@
         }
 
         #hobby img {
+            width: 100px;
+            height: 100px;
             float: right;
             margin-right: 45px;
             border-radius: 15px;
@@ -147,7 +153,7 @@
             color: #fff;
         }
 
-        .shape-ex11{
+        .buttonEffect {
             width: 150px;
             height: 40px;
             display: block;
@@ -160,11 +166,13 @@
             position: relative;
             transition: all .3s linear;
         }
-        .shape-ex11 p{
+
+        .buttonEffect p {
             position: relative;
             z-index: 1;
         }
-        .shape-ex11::before{
+
+        .buttonEffect::before {
             content: "";
             width: 20px;
             height: 20px;
@@ -178,7 +186,8 @@
             transition: all .3s linear;
             background-color: transparent;
         }
-        .shape-ex11::after{
+
+        .buttonEffect::after {
             content: "";
             width: 20px;
             height: 20px;
@@ -192,10 +201,12 @@
             transition: all .3s linear;
             background-color: transparent;
         }
-        .shape-ex11:hover::before, .shape-ex11:hover::after{
+
+        .buttonEffect:hover::before, .buttonEffect:hover::after {
             width: 100%;
             height: 100%;
         }
+
         #cytus {
             font-size: 40px;
             color: #3691f3;
@@ -214,23 +225,34 @@
 <div id="page">
     <div id="background">
         <div id="main">
-            <div id="header">Jeff Li's Hobbies<hr class="hr1"/></div>
+            <div id="header">Jeff Li's Hobbies
+                <hr class="hr1"/>
+            </div>
             <div id="motto">Motto:<br/><span class="center">No one can beat me except myself</span></div>
             <div id="hobby">
                 <p class="center title">My Hobby</p>
                 <p>
-                    <img src="picture/cytus2_logo.jpg" width="100" height="100">
+                    <img src="picture/cytus2_logo.jpg" alt="cytus2">
                     I like playing game! Let me recommend a mobile game to you!<br/>
                     The name is <span id="cytus">Cytus II</span>! This is a music game.<br/>
                     This game have many story lines and many nice sound songs!<br/>
                     The below video shows two songs of my favorites!<br/>
-                    <iframe width="480" height="270" src="https://www.youtube.com/embed/6mT1cRZnLbg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    <iframe class="floatRight" width="480" height="270" src="https://www.youtube.com/embed/mTb1fW8AqNE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/>
+                    <iframe width="480" height="270" src="https://www.youtube.com/embed/6mT1cRZnLbg"
+                            title="YouTube video player"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    <iframe class="floatRight" width="480" height="270" src="https://www.youtube.com/embed/mTb1fW8AqNE"
+                            title="YouTube video player"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    <br/>
                     These songs are so moving with the game plots!
                 </p>
             </div>
             <div id="footer">
-                <div class="button center"><a href="index.html" target="_self"><div class="shape-ex11 center">Home</div></a></div>
+                <div class="button center"><a href="index.html" target="_self">
+                    <div class="buttonEffect center">Home</div>
+                </a></div>
             </div>
         </div>
     </div>
