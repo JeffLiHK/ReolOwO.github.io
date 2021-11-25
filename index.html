@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Home page</title>
-    <style type="text/css">
+    <style>
         * {
             padding: 0;
             margin: 0;
@@ -61,6 +61,8 @@
         }
 
         #logo img {
+            width: 200px;
+            height: 200px;
             animation: B 15s ease-in 0s infinite;
             margin-right: auto;
             margin-left: auto;
@@ -102,14 +104,14 @@
             border-bottom: 1px solid #69cef8;
         }
 
-        #top_navlist {
+        #top_navList {
             display: block;
             max-width: 260px;
             margin: 0 auto;
             padding-bottom: 65px;
         }
 
-        #top_navlist li {
+        #top_navList li {
             list-style-type: none;
         }
 
@@ -184,12 +186,12 @@
 <div id="page">
     <div id="background">
         <div id="main">
-            <div id="logo" class="center"><img height="200px" width="200px" src="picture/logo.png" alt="logo"></div>
+            <div id="logo" class="center"><img src="picture/logo.png" alt="logo"></div>
             <div id="title"><h1>Welcome to Jeff Li's Page</h1>
                 <hr class="hr1"/>
             </div>
             <span id="menu">
-                <ul id="top_navlist">
+                <ul id="top_navList">
                     <a class="top_nav" href="portfolio.html">
                         <li>Personal Portfolio</li>
                     </a>
@@ -215,7 +217,7 @@
     }
 
     function toggleSound() {
-        var music = document.getElementById("music");
+        let music = document.getElementById("music");
 
         if (music.paused) {
             music.paused=false;
