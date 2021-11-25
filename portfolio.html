@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal portfolio page</title>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-family: "Lucida Calligraphy", Arial, serif;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        #page {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            margin: auto;
+            background-color:yellow;
+        }
+
+        #background {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background-image: url("picture/HK_YTE.png");
+            background-color: #121925;
+            background-size: cover;
+            background-position: 50% 50%;
+            background-attachment: fixed;
+        }
+
+        #main {
+            display: block;
+            width: 85%;
+            /*background-color: rgba(199, 191, 191, 0.95);*/
+            margin: 0 auto;
+            padding: 45px 35px 2px;
+            border-radius: 25px;
+        }
+
+        #header {
+            text-align: center;
+            width: 82%;
+            display: block;
+            font-family: "Lucida Calligraphy", Arial, serif;
+            background-color: rgba(199, 191, 191, 0.7);
+            font-size: 38px;
+            font-weight: bold;
+            color: #5029f1;
+            margin: 0 auto;
+            border-radius: 15px;
+            padding: 5px 0;
+        }
+
+        .hr1 {
+            width: 75%;
+            margin: 2px auto;
+            border: 0;
+            border-bottom: 2px solid #5029f1;
+        }
+
+        #container {
+            display: block;
+            width: 80%;
+            margin: 12px auto 8px;
+            padding: 15px;
+            border-radius: 25px;
+            background-color: rgba(96, 160, 206, 0.7);;
+        }
+
+        #upper {
+            display: block;
+            margin: 15px 0;
+            height: 320px;
+            /*background-color: #b1e5e5;*/
+        }
+
+        #lower {
+            display: block;
+            margin: 15px 0 0 0;
+            /*background-color: #b1e5e5;*/
+            text-align: left;
+        }
+
+        #reol {
+            float: right;
+            border-radius: 80px;
+            margin-right: 25px;
+            animation: rotate 18s linear 0s infinite;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        #self_data {
+            display: block;
+            text-align: left;
+            text-indent: 1em;
+            float: left;
+            width: 60%;
+            /*background-color: yellowgreen;*/
+        }
+
+        #photo {
+            display: block;
+            background-image: url("picture/Jeff2.png");
+            background-repeat: no-repeat;
+            width: 225px;
+            height: 300px;
+            margin: 0 25px;
+            float: right;
+            border: 3px solid;
+            border-radius: 15px;
+            animation: bdc 10s linear 0s infinite;
+        }
+
+        @keyframes bdc {
+            0% {
+                border-color: #83afef;
+            }
+            25% {
+                border-color: #d93838;
+            }
+            50% {
+                border-color: #f183d6;
+            }
+            75% {
+                border-color: #90f697;
+            }
+            100% {
+                border-color: #83afef;
+            }
+        }
+
+        #self_info_list {
+            list-style: none;
+        }
+
+        #self_info_list .asking {
+            font-size: 35px;
+        }
+
+        #self_info_list .answering {
+            text-underline: black;
+            font-size: 27px;
+            padding-left: 5.5em;
+            /*text-indent: 6em;*/
+            text-decoration-line: underline;
+            font-family: "Lucida Handwriting", Arial, serif;
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+            animation: a 10s linear 0s infinite;
+        }
+
+        @keyframes a {
+            0% {
+                color: #83afef;
+            }
+            25% {
+                color: #d93838;
+            }
+            50% {
+               color: #f183d6;
+            }
+            75% {
+                color: #90f697;
+            }
+            100% {
+                color: #83afef;
+            }
+        }
+
+        #lower p {
+            font-size: 25px;
+            line-height: 1.5em;
+            text-indent: 1em;
+        }
+
+        #lower a {
+            font-size: 35px;
+            color: #0079ff;
+            font-family: "Lucida Handwriting", Arial, serif;
+            animation: b 4s linear 0s infinite;
+        }
+
+        #lower a:hover {
+            background-color: #154052;
+            color: deepskyblue;
+        }
+
+        #lower a:active {
+            background-color: #90d7f3;
+            color: blue;
+        }
+
+        @keyframes b {
+            0% {
+                color: #eedcad;
+                text-shadow: 5px 5px 15px #eedcad;
+            }
+            50% {
+                color: #8be5ec;
+                text-shadow: 5px 5px 15px #8be5ec;
+            }
+            100% {
+                color: #eedcad;
+                text-shadow: 5px 5px 15px #eedcad;
+            }
+        }
+
+        #lower p.center {
+            font-size: 35px;
+            color: #b10b0b;
+        }
+
+        .purple {
+            color: #cc69f1;
+        }
+
+        .red {
+            color: #ad3232;
+        }
+
+        .big {
+            font-size: 35px;
+            font-family: "Lucida Handwriting", Arial, serif;
+        }
+
+        .button {
+            font-size: 25px;
+            display: block;
+            float: left;
+            margin: 0 15px;
+            background-color: rgba(128, 128, 128, 0.65);
+            padding: 3px 15px;
+            color: #b10b0b;
+            border-radius: 8px;
+        }
+
+        .button:hover {
+            background-color: rgb(159, 193, 250);
+            color: #ef7c7c;
+        }
+
+        .button:active {
+            background-color: rgb(20, 104, 243);
+            color: #f82424;
+        }
+
+        #footer {
+            display: inline-block;
+            height: 80%;
+            /*background-color: #fff;*/
+        }
+
+
+    </style>
+</head>
+<body>
+<div id="page">
+    <div id="background">
+        <div id="main">
+            <div id="header" class="center">
+                Jeff Li Portfolio
+                <hr class="hr1"/>
+            </div>
+
+            <div id="container" class="center">
+                <div id="upper">
+                    <span id="self_data">
+                        <ul id="self_info_list">
+                            <li class="asking">Name:</li>
+                            <li class="answering">Jeff, Li</li>
+                            <li class="asking">Region:</li>
+                            <li class="answering">Hong Kong</li>
+                            <li class="asking">Power:</li>
+                            <li class="answering">O-oooooooooo AAAAE-A-A-I-A-U- JO-oooooooooooo</li>
+                        </ul>
+                    </span>
+                    <span id="photo"></span>
+                </div>
+                <div id="lower">
+                    <p>Hello! Welcome to my webpage! It's my first custom website! ^^</p>
+                    <p>The background image is where I am living.</p>
+                    <img id="reol" src="picture/reol.png"/>
+                    <p>It is beautiful! Right? I love living this!</p>
+                    <p>The topic of this page is <span class="red big">singer</span>.</p>
+                    <p>Let me share a Japan singer to you - <span class="purple big">Reol</span> ! This is her! --></p>
+                    <p>And I will share her one song to you!
+                        <a href="https://www.youtube.com/watch?v=LfephiFN76E&ab_channel=ReolOfficial"
+                           target="_blank">"No Title"(Click me!)</a>
+                    </p>
+                    <p class="center">You can click the below "Contact" bottom to email me!</p>
+                </div>
+                <div id="footer">
+                    <a class="button" href="mailto: lidfdsffd49@gmail.com">Contact</a>
+                    <a class="button" href="index.html">Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

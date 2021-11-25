@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hobbies page</title>
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            font-family: "Lucida Calligraphy", Arial, serif;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        #page {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            margin: auto;
+            background-color: yellow;
+        }
+
+        #background {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background-image: url("picture/HK_MK(1440x900).png");
+            background-color: #121925;
+            background-size: cover;
+            background-position: 50% 50%;
+            background-attachment: fixed;
+        }
+
+        #main {
+            display: block;
+            width: 70%;
+            /*background-color: rgba(199, 191, 191, 0.95);*/
+            margin: 0 auto;
+            padding: 45px 35px 2px;
+            border-radius: 25px;
+        }
+
+        #header {
+            text-align: center;
+            display: block;
+            font-family: "Lucida Calligraphy", Arial, serif;
+            background-color: rgba(76, 91, 143, 0.7);
+            font-size: 38px;
+            font-weight: bold;
+            color: #88c2ec;
+            margin: 0 auto;
+            border-radius: 15px;
+            padding: 5px 0;
+        }
+
+        .hr1 {
+            width: 75%;
+            margin: 2px auto;
+            border: 0;
+            border-bottom: 2px solid #88c2ec;
+        }
+
+        #motto {
+            text-align: center;
+            display: block;
+            font-family: "Lucida Calligraphy", Arial, serif;
+            background-color: rgb(24, 57, 97, 0.7);
+            font-size: 28px;
+            font-weight: bold;
+            color: #e08080;
+            margin: 10px auto;
+            border-radius: 15px;
+            padding: 5px 0;
+        }
+
+        #motto .center {
+            background: linear-gradient(to top, #fd3737, #ff4545, #ff5f5f);
+            -webkit-background-clip: text;
+            color: transparent;
+            -webkit-text-stroke: 0.2px #b28ee3;
+            font-family: "Lucida Handwriting", sans-serif, Arial;
+            font-size: 48px;
+            text-shadow: 5px 5px 12px #69578a;
+        }
+
+        #hobby {
+            display: block;
+            margin: 12px auto 8px;
+            padding: 15px;
+            border-radius: 25px;
+            background-color: rgb(24, 57, 97, 0.7);;
+        }
+
+        #hobby img {
+            float: right;
+            margin-right: 45px;
+            border-radius: 15px;
+            box-shadow: 5px 5px 5px black;
+        }
+
+        #hobby .title {
+            font-size: 30px;
+            color: #69aaef;
+        }
+
+        #hobby p {
+            font-size: 25px;
+            color: #48f894;
+        }
+
+        #footer {
+            display: block;
+            text-align: center;
+        }
+
+        .button {
+            font-size: 25px;
+            display: inline-block;
+            margin: 20px auto 0;
+            background-color: rgba(100, 100, 100, 0.7);
+            padding: 12px 35px;
+            border-radius: 25px;
+            animation: C 16s linear 0s infinite;
+        }
+
+        @keyframes C {
+            0% {
+                background-color: rgb(105, 206, 248, 0.6);
+            }
+            50% {
+                background-color: rgba(255, 133, 184, 0.6);
+            }
+            100% {
+                background-color: rgb(105, 206, 248, 0.6);
+            }
+        }
+
+        .button .center:active {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .shape-ex11{
+            width: 150px;
+            height: 40px;
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+            cursor: pointer;
+            line-height: 40px;
+            color: #000;
+            background-color: transparent;
+            position: relative;
+            transition: all .3s linear;
+        }
+        .shape-ex11 p{
+            position: relative;
+            z-index: 1;
+        }
+        .shape-ex11::before{
+            content: "";
+            width: 20px;
+            height: 20px;
+            display: block;
+            box-sizing: border-box;
+            border-top: 1px solid #000;
+            border-left: 1px solid #000;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: all .3s linear;
+            background-color: transparent;
+        }
+        .shape-ex11::after{
+            content: "";
+            width: 20px;
+            height: 20px;
+            display: block;
+            box-sizing: border-box;
+            border-bottom: 1px solid #000;
+            border-right: 1px solid #000;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            transition: all .3s linear;
+            background-color: transparent;
+        }
+        .shape-ex11:hover::before, .shape-ex11:hover::after{
+            width: 100%;
+            height: 100%;
+        }
+        #cytus {
+            font-size: 40px;
+            color: #3691f3;
+            font-style: italic;
+            text-shadow: 2px 2px 2px black;
+            font-weight: bold;
+        }
+
+        .floatRight {
+            float: right;
+        }
+
+    </style>
+</head>
+<body>
+<div id="page">
+    <div id="background">
+        <div id="main">
+            <div id="header">Jeff Li's Hobbies<hr class="hr1"/></div>
+            <div id="motto">Motto:<br/><span class="center">No one can beat me except myself</span></div>
+            <div id="hobby">
+                <p class="center title">My Hobby</p>
+                <p>
+                    <img src="picture/cytus2_logo.jpg" width="100" height="100">
+                    I like playing game! Let me recommend a mobile game to you!<br/>
+                    The name is <span id="cytus">Cytus II</span>! This is a music game.<br/>
+                    This game have many story lines and many nice sound songs!<br/>
+                    The below video shows two songs of my favorites!<br/>
+                    <iframe width="480" height="270" src="https://www.youtube.com/embed/6mT1cRZnLbg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="floatRight" width="480" height="270" src="https://www.youtube.com/embed/mTb1fW8AqNE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br/>
+                    These songs are so moving with the game plots!
+                </p>
+            </div>
+            <div id="footer">
+                <div class="button center"><a href="index.html" target="_self"><div class="shape-ex11 center">Home</div></a></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
